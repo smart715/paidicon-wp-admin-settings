@@ -10,7 +10,7 @@ function App() {
     <Routes>
         <Route path="/general-setting" element={<GeneralSetting />} />
         <Route path="/theme" element={<ThemeSetting />} />
-        <Route path='premium' element={<PremiumFeature />} />
+        <Route path='/premium' element={<PremiumFeature />} />
     </Routes>
    </>
   );

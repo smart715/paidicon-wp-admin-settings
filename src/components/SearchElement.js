@@ -1,9 +1,12 @@
 import React from 'react'
+import './assets/custom-style.css'
 
-const SearchElement = (props)=>{
+const SearchElement = ()=>{
+   return(
     <>
-        <div></div>
-    </>
+    
+</>
+   )
 }
 
 export default SearchElement
