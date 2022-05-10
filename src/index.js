@@ -10,11 +10,13 @@ import 'bootstrap/js/src/toast.js'
 import 'bootstrap/js/src/offcanvas.js'
 import 'bootstrap/js/src/popover.js'
 import 'bootstrap/js/src/tooltip.js'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

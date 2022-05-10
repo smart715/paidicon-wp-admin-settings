@@ -1,7 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './assets/custom-style.css'
 import logo from  '../components/assets/Images/logo.png'
+import { Link } from 'react-router-dom'
 const Header = () => {
+    let url = window.location.href;
+    let n = url.lastIndexOf('/');
+    let active = url.substring(n + 1);
     return (
         <div className="header-mainn border-bottom-dotted bg-light">
             <div className="header-mainn-inner container">
@@ -14,14 +18,15 @@ const Header = () => {
                         <div className="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
                             <ul className="navbar-nav ">
                                 <li className="nav-item me-0 mb-2 mb-lg-0 me-lg-2 text-center">
-                                    <a className="nav-link active" aria-current="page" href="/general-setting">General Settings</a>
+                                    <Link id='general'  className= {`nav-link ${active==="general-setting"? "active" : ""  } `} aria-current="page" to="/general-setting">General Settings</Link>
                                 </li>
                                 <li className="nav-item me-0 mb-2 mb-lg-0 me-lg-2 text-center">
-                                    <a className="nav-link" href="/theme">Theme Settings</a>
+                                    <Link id ='theme'  className= {`nav-link ${active==="theme"? "active" : ""  } `} to="/theme">Theme Settings</Link>
                                 </li>
                                 <li className="nav-item text-center">
-                                    <a className="nav-link" href="/premium">Premium Features</a>
+                                   <Link id = "premium"  className= {`nav-link ${active==="premium"? "active" : ""  } `} to="/premium">Premium Features</Link>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -30,5 +35,4 @@ const Header = () => {
         </div>
     )
 }
-
 export default Header
