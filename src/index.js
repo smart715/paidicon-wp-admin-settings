@@ -1,7 +1,15 @@
 import React from 'react';
+// import 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/src/modal.js'
-import 'bootstrap/js/dist/base-component.js'
+import 'bootstrap/js/src/base-component.js'
+import 'bootstrap/js/src/dropdown.js'
+import 'bootstrap/js/src/alert.js'
+import 'bootstrap/js/src/button.js'
+import 'bootstrap/js/src/toast.js'
+import 'bootstrap/js/src/offcanvas.js'
+import 'bootstrap/js/src/popover.js'
+import 'bootstrap/js/src/tooltip.js'
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import './index.css';

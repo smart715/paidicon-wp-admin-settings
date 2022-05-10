@@ -45,9 +45,11 @@ body {
 }
 .search-btnn {
     position: absolute;
-    top: 7px;
-    right: 7px;
+    top: 5px;
+    right: 5px;
     z-index: 2;
+    min-height: 42px;
+    min-width: 60px;
 }
 .btn-primary {
     min-height: 52px;
@@ -82,7 +84,7 @@ body {
     position: relative;
     z-index: 5;
 }
-.form-control:focus {
+.form-control:focus, .form-switch .form-check-input:focus, .form-select:focus, .btn-check:focus+.btn-secondary, .btn-secondary:focus {
     border: 0 !important;
     box-shadow: none;
 }
@@ -114,8 +116,86 @@ body {
 .popup-gery .modal-content .modal-footer {
     padding: 25px 20px;
 }
+label.file-upload-labell {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 26px;
+    background: #f8f9fa;
+}
+.file-upload-iconn {
+    position: absolute;
+    left: 5px;
+    z-index: 1;
+    top: 5px;
+    pointer-events: none;
+}
+label.file-upload-labell:before {
+    content: "Browse";
+    background: #000;
+    height: 42px;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    padding: 0 20px;
+    border-radius: 26px;
+    line-height: 42px;
+    color: #fff;
+    font-weight: 500;
+}
+.form-switch .form-check-input {
+    order: 13;
+}
+.form-switch .form-check-input {
+    height: 20px;
+    width: 35px;
+}
+.form-check.form-switch {
+    min-height: 52px;
+    border-radius: 26px;
+}
+.form-group .form-check-label {
+    font-weight: 400;
+}
+::placeholder {
+    color: #212529 !important;
+}
+.form-check-input:checked {
+    background-color: #262626;
+    border-color: #262626;
+}
+@media screen and (min-width: 768px) {
+    .formbtn-main-roww {
+        max-width: 750px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .formbtn-main-roww {
+        max-width: 990px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .formbtn-main-roww {
+        max-width: 1170px;
+    }
+}
 @media screen and (min-width: 1400px) {
     .container {
         max-width: 1670px;
     } 
+    .formbtn-main-roww {
+        max-width: 1670px;
+    }
+}
+
+@media (max-width: 767.98px) {
+.formbtn-main-roww {
+    top: 80px;
+    text-align: center;
+}
+}
+@media (max-width: 480.98px) {
+    .form-group label, .form-control, .form-select {
+        font-size: 13px;
+    }
 }
