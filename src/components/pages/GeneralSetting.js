@@ -119,7 +119,7 @@ const GeneralSetting = () => {
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4 multiselct-dropp">
                                             <label className="mb-2 w-100">Category</label>
                                             <select className="form-select selectpicker" multiple aria-label="Default select example">
-                                                <option defaultValue>Category</option>
+                                                <option defaultValue disabled>Category</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
@@ -288,7 +288,7 @@ const GeneralSetting = () => {
                                     <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4 multiselct-dropp">
                                         <label className="mb-2">Restrict To Categories</label>
                                         <select className="form-select selectpicker" multiple aria-label="Default select example">
-                                            <option defaultValue>Categories</option>
+                                            <option defaultValue disabled>Categories</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
@@ -297,7 +297,7 @@ const GeneralSetting = () => {
                                     <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4 multiselct-dropp">
                                         <label className="mb-2">Restrict Icon To Pages</label>
                                         <select className="form-select selectpicker" multiple aria-label="Default select example">
-                                            <option defaultValue>Pages</option>
+                                            <option defaultValue disabled>Pages</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
