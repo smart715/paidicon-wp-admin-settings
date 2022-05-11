@@ -20,13 +20,14 @@ body {
 .border-dotted {
     border: 1px dashed #D9D9D9;
 }
-.header-mainn-inner ul.navbar-nav > li.nav-item > a {
+.header-mainn-inner ul.navbar-nav > li.nav-item > .nav-link {
     background: #fff;
     padding: 12px 30px;
     border-radius: 50px;
     font-size: 14px;
+    cursor: pointer;
 }
-.header-mainn-inner ul.navbar-nav > li.nav-item > a.active {
+.header-mainn-inner ul.navbar-nav > li.nav-item > .nav-link.active {
     background: #262626;
     color: #fff;
 }
@@ -129,6 +130,9 @@ label.file-upload-labell {
     z-index: 1;
     top: 5px;
     pointer-events: none;
+    height: 42px;
+    width: 42px;
+    border-radius: 26px;
 }
 label.file-upload-labell:before {
     content: "Browse";
@@ -164,6 +168,26 @@ label.file-upload-labell:before {
     background-color: #262626;
     border-color: #262626;
 }
+.multiselct-dropp .dropdown.bootstrap-select.form-select {
+    padding: 0;
+    width: 100% !important;
+}
+.multiselct-dropp .dropdown.bootstrap-select.form-select button.btn.dropdown-toggle {
+    min-height: 52px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.multiselct-dropp .bootstrap-select .dropdown-toggle:focus, 
+.multiselct-dropp .bootstrap-select .dropdown-toggle:active,
+.multiselct-dropp .bootstrap-select .dropdown-toggle {
+    outline: none !important;
+    outline-offset: unset !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+.filter-option-inner-inner {
+    color: #212529;
+}
 @media screen and (min-width: 768px) {
     .formbtn-main-roww {
         max-width: 750px;
@@ -198,4 +222,7 @@ label.file-upload-labell:before {
     .form-group label, .form-control, .form-select {
         font-size: 13px;
     }
+}
+.display-none {
+    display: none;
 }
