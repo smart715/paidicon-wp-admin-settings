@@ -113,6 +113,7 @@ const GeneralSetting = () => {
                                             {/* <img src={logo} height="42px" alt="Image preview..." /> */}
                                                 <label className="file-upload-labell" htmlFor="file-upload-input"></label>
                                                 <input type="file" onChange={previewFile} className="form-control bg-light opacity-0" placeholder="Title" id="file-upload-input" />
+
                                             </div>
 
                                         </div>
@@ -236,7 +237,7 @@ const GeneralSetting = () => {
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4">
                                             <label className="mb-2">Design</label>
                                             <select className="form-select bg-light" aria-label="Default select example">
-                                                <option defaultValue>Rounded</option>
+                                                <option defaultValue >Rounded</option>
                                                 <option value="medium">Medium</option>
                                                 <option value="large">Large</option>
                                                 <option value="extra-large">Extra Large</option>
