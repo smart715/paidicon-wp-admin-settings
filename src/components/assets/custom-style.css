@@ -223,18 +223,59 @@ div#Premium-Features .edit-account button.nav-link.active {
     width: 500px;
     left: auto;
     right: 0;
-    padding: 30px;
+    padding: 30px 30px 17px;
     border-radius: 20px;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
         top: 65px;
 }
 .notification_bar .dropdown-toggle {
-    background: transparent linear-gradient(90deg, #008BD0 0%, #00C4F0 100%) 0% 0% no-repeat padding-box;
+    background: #fff;
     width: 44px;
     height: 44px;
     padding: 0;
     border: 0;
     text-align: center;
+}
+.bootstrap-select .dropdown-toggle::after {
+    width: 8px;
+    height: 8px;
+    border: 2px solid;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg);
+}
+.notification_bar .dropdown-toggle svg.with_hoverrr,
+.notification_bar.show .dropdown-toggle svg.without_hoverrr {
+    display: none;
+    margin: auto;
+}
+.notification_bar.show .dropdown-toggle svg.with_hoverrr,  .notification_bar .dropdown-toggle svg.without_hoverrr {
+    display: block;
+    margin: auto;
+}
+span.notif_countt {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: red;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease;
+}
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.show span.notif_countt {
+    border: 2px solid #fff;
+    width: 12px;
+    height: 12px;
+}
+.notification_bar.show .dropdown-toggle {
+    background: transparent linear-gradient(90deg, #008BD0 0%, #00C4F0 100%) 0% 0% no-repeat padding-box;
+}
+.notification_bar .dropdown-toggle::active {
+    background: transparent linear-gradient(90deg, #008BD0 0%, #00C4F0 100%) 0% 0% no-repeat padding-box;
 }
 .svg_notif {
     width: 64px;
@@ -247,9 +288,11 @@ div#Premium-Features .edit-account button.nav-link.active {
 .notification_bar .dropdown-toggle:after {
     display: none;
 }
-.history_contentt table th, .history_contentt table td {
+.history_contentt table th,
+.history_contentt table td {
     border-bottom: 1px dashed #00000036;
     font-size: 14px;
+    padding: 17px 0px;
 }
 .history_contentt table.table {
     border-collapse: unset;
@@ -378,7 +421,7 @@ div#Premium-Features .edit-account button.nav-link.active {
 }
 .formbtn-main-roww {
     position: absolute;
-    top: -74px;
+    top: -78px;
     left: 50%;
     max-width: 1670px;
     width: 100%;
@@ -388,6 +431,10 @@ div#Premium-Features .edit-account button.nav-link.active {
 }
 .light-blue {
     color: #00C4F0;
+}
+
+.edit-account-payment-main {
+    margin-top: 5px;
 }
 .formsearch-coll {
     position: relative;
