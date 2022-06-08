@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="vuesax_bulk_card" data-name="vuesax/bulk/card" transform="translate(-492 -508)">
+    <g id="card" transform="translate(492 508)">
+      <path id="Vector" d="M40,0V14.92a8.288,8.288,0,0,1-8.3,8.28H8.3A8.288,8.288,0,0,1,0,14.92V0Z" transform="translate(4 18)" fill="#fff" opacity="0.4"/>
+      <path id="Vector-2" data-name="Vector" d="M40,8.28V11.2H0V8.28A8.288,8.288,0,0,1,8.3,0H31.7A8.288,8.288,0,0,1,40,8.28Z" transform="translate(4 6.8)" fill="#fff"/>
+      <path id="Vector-3" data-name="Vector" d="M5.5,3h-4A1.511,1.511,0,0,1,0,1.5,1.511,1.511,0,0,1,1.5,0h4A1.511,1.511,0,0,1,7,1.5,1.511,1.511,0,0,1,5.5,3Z" transform="translate(10.5 31.5)" fill="#fff"/>
+      <path id="Vector-4" data-name="Vector" d="M9.5,3h-8A1.511,1.511,0,0,1,0,1.5,1.511,1.511,0,0,1,1.5,0h8A1.511,1.511,0,0,1,11,1.5,1.511,1.511,0,0,1,9.5,3Z" transform="translate(19.5 31.5)" fill="#fff"/>
+      <path id="Vector-5" data-name="Vector" d="M0,0H48V48H0Z" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>
