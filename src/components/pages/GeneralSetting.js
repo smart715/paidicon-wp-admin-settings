@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 // import SearchElement from '../SearchElement'
 import './../assets/custom-style.css'
 import iconn from '../assets/Images/icon-imgg.png'
+import blacklogoo from '../assets/Images/paidicon-logo.png'
+import whitelogoo from '../assets/Images/Paidicon.png'
 // import { Button } from 'bootstrap'
 // import { Carousel } from 'bootstrap'
 import logo from '../assets/Images/logo.png'
@@ -51,7 +53,7 @@ const GeneralSetting = () => {
                 <div className="header-mainn-inner px-0">
                     <nav className="navbar navbar-expand-lg navbar-light py-4 px-2">
                         <div className="container">
-                            <a className="navbar-brand" href="#"><img src={iconn} alt="" height="44px" /></a>
+                            <a className="navbar-brand" href="#"><img src={blacklogoo} alt="" height="64px" /></a>
                             <div className='nav_notif-outerr'>
                                 <ul className='notif_main-outer'>
                                     <li className='dropdown notification_bar ms-2 mt-0'>
@@ -236,7 +238,7 @@ const GeneralSetting = () => {
                                         <li className="nav-item text-center">
                                             {/* <Link id="premium" onClick={() => Val('premium')} className={`nav-link ${newlink === "premium" ? "active" : "/premium"} `} to='' >Premium Features</Link> */}
                                             <span id="premium" onClick={() => Val('premium')} className={`nav-link ${newlink === "premium" ? "active" : ""} `} >Premium Features</span>
-                                        </li>
+                                          </li>
                                     </ul>
 
                                 </div>
@@ -345,8 +347,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white">Import Backup Settings</h1>
-                                        <p className="text-white mb-0">Do you want to import the last backup of your settings from Monday April 18 at 09:45 am? You won’t be able to do this later.</p>
+                                        <h1 className="mt-3 mb-1 text-white">Import Backup Settings</h1>
+                                        <p className="popup-paragraph text-white mb-0">Do you want to import the last backup of your settings from Monday April 18 at 09:45 am? You won’t be able to do this later.</p>
                                     </div>
                                     <div className="modal-footer border-top-dotted justify-content-center">
                                         <button type="button" className="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
@@ -372,8 +374,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white">Payment Successful</h1>
-                                        <p className="text-white mb-0">Your license is 98FmDbdbxaEfxpUDlODcYM and this license expires on 01 December, 2022. This license has also been sent to your email address.</p>
+                                        <h1 className="mt-3 mb-1 text-white">Payment Successful</h1>
+                                        <p className="popup-paragraph text-white mb-0">Your license is 98FmDbdbxaEfxpUDlODcYM and this license expires on 01 December, 2022. This license has also been sent to your email address.</p>
                                     </div>
                                     <div className="modal-footer border-top-dotted justify-content-center">
                                         <button type="button" className="btn btn-primary">Continue</button>
@@ -400,8 +402,8 @@ const GeneralSetting = () => {
                                             </g>
                                         </svg>
 
-                                        <h1 className="mt-3 mb-3 text-white">Payment Failed</h1>
-                                        <p className="text-white mb-0">We’re having trouble processing your payment at the moment. Please try again later.</p>
+                                        <h1 className="mt-3 mb-1 text-white">Payment Failed</h1>
+                                        <p className="popup-paragraph text-white mb-0">We’re having trouble processing your payment at the moment. Please try again later.</p>
                                     </div>
                                     <div className="modal-footer border-top-dotted justify-content-center">
                                         <button type="button" className="btn btn-primary">Try again</button>
@@ -429,8 +431,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white">Verifying API Key</h1>
-                                        <p className="text-white">Please wait! We are verifying your API key. You’ll receive a response shortly.</p>
+                                        <h1 className="mt-3 mb-1 text-white">Verifying API Key</h1>
+                                        <p className="popup-paragraph text-white">Please wait! We are verifying your API key. You’ll receive a response shortly.</p>
                                     </div>
                                     {/* <div className="modal-footer border-top-dotted justify-content-center">
                                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -459,8 +461,8 @@ const GeneralSetting = () => {
                                             </g>
                                         </svg>
 
-                                        <h1 className="mt-3 mb-3 text-white">Processing Payment</h1>
-                                        <p className="text-white">Please wait! We are processing your payment request. You’ll receive a response shortly.</p>
+                                        <h1 className="mt-3 mb-1 text-white">Processing Payment</h1>
+                                        <p className="popup-paragraph text-white">Please wait! We are processing your payment request. You’ll receive a response shortly.</p>
                                     </div>
                                     {/* <div className="modal-footer border-top-dotted justify-content-center">
                                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -486,8 +488,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white text-center">Enter License Key</h1>
-                                        <p className="text-white">Please enter your existing license key in order to continue using the premium features.</p>
+                                        <h1 className="mt-3 mb-1 text-white text-center">Enter License Key</h1>
+                                        <p className="popup-paragraph text-white">Please enter your existing license key in order to continue using the premium features.</p>
 
                                     </div>
                                     <div className='licence-form position-relative px-3'>
@@ -519,8 +521,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white">Verification Successful</h1>
-                                        <p className="text-white mb-0">You’re API key has been verified successfully. Do you want to import your last saved settings?</p>
+                                        <h1 className="mt-3 mb-1 text-white">Verification Successful</h1>
+                                        <p className="popup-paragraph text-white mb-0">You’re API key has been verified successfully. Do you want to import your last saved settings?</p>
                                     </div>
                                     <div className="modal-footer border-top-dotted justify-content-center">
                                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -549,8 +551,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white text-center">Verification Failed</h1>
-                                        <p className="text-white">The API key has been used on another WordPress installation. Provide the IP address of the server which currently uses this API key and click on continue to use it here instead.</p>
+                                        <h1 className="mt-3 mb-1 text-white text-center">Verification Failed</h1>
+                                        <p className="popup-paragraph text-white">The API key has been used on another WordPress installation. Provide the IP address of the server which currently uses this API key and click on continue to use it here instead.</p>
 
                                     </div>
                                     <div className='licence-form position-relative px-3'>
@@ -615,8 +617,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white text-center">Standard Package</h1>
-                                        <p className="text-white">Please purchase our annual standard package in order to continue using the application.</p>
+                                        <h1 className="mt-3 mb-1 text-white text-center">Standard Package</h1>
+                                        <p className="popup-paragraph text-white">Please purchase our annual standard package in order to continue using the application.</p>
 
                                     </div>
                                     <div className='licence-form position-relative px-3'>
@@ -705,7 +707,7 @@ const GeneralSetting = () => {
                                             <thead>
                                                 <tr>
                                                     <th style={{ fontSize: '16px', padding: '30px 10px 30px', textAlign: 'center', color: 'white' }}>
-                                                        Paid Icon
+                                                        <a className="navbar-brand" href="#"><img src={whitelogoo} alt="" height="34px" /></a>
                                                     </th>
                                                 </tr>
                                             </thead>
@@ -752,8 +754,8 @@ const GeneralSetting = () => {
                                                 </g>
                                             </g>
                                         </svg>
-                                        <h1 className="mt-3 mb-3 text-white text-center">Register Now</h1>
-                                        <p className="text-white">Already have a license? <b>Click Here</b> to enter your existing license and continue.</p>
+                                        <h1 className="mt-3 mb-1 text-white text-center">Register Now</h1>
+                                        <p className="popup-paragraph text-white">Already have a license? <a className='click-here-link-re text-decoration-none' href="#">Click Here</a> to enter your existing license and continue.</p>
 
                                     </div>
                                     <div className='px-3'>
@@ -901,6 +903,9 @@ const GeneralSetting = () => {
             </div>
 
             <div id='Premium-Features' className={newlink === 'premium' ? " " : "display-none"}>
+                <div className='Premium Features-red-bg-nav'>
+                    <p>Your license expires in 1 day. <a className='click-here-link text-decoration-none' href="#">Click Here</a> to renew now.</p>
+                </div>
                 {/* <Header />  */}
                 <div className="header-title-main  bg-light">
                     <div className="header-title-main-inner pb-lg-4 container ">
@@ -908,7 +913,7 @@ const GeneralSetting = () => {
                         <div className="premium-feature-btn-edit d-inline-flex align-items-center">
                             <div className="edit-account-payment-main d-flex">
                                 <div className="edit-account">
-                                    <button type="button" className="btn btn-edit">Edit Account Info</button>
+                                    <button type="button" className="btn btn-edit  text-nowrap">Edit Account Info</button>
                                 </div>
                                 <div className="edit-account mx-2">
                                     <button type="button" onClick={() => Val('payment')} className={`px-2 btn btn-edit nav-link ${newlink === "premium" ? "active" : ""}`} style={{ width: '128px' }}>Payment History</button>

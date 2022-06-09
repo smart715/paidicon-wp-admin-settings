@@ -69,11 +69,13 @@ body {
     height: 36px;
     max-width: 153px;
 }
-.form-select {
-    background-image: url("data:image/svg+xml,%3Csvg id='arrow-down' xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath id='Vector' d='M7.92,0,4.66,3.26a.993.993,0,0,1-1.4,0L0,0' transform='translate(2.04 4.475)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3Cpath id='Vector-2' data-name='Vector' d='M0,0H12V12H0Z' transform='translate(12 12) rotate(180)' fill='none' opacity='0'/%3E%3C/svg%3E%0A");
+
+.licence-form-r .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg id=%27arrow-down%27 xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath id=%27Vector%27 d=%27M7.92,0,4.66,3.26a.993.993,0,0,1-1.4,0L0,0%27 transform=%27translate%282.04 4.475%29%27 fill=%27none%27 stroke=%27%23fff%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27 stroke-width=%271%27/%3E%3Cpath id=%27Vector-2%27 data-name=%27Vector%27 d=%27M0,0H12V12H0Z%27 transform=%27translate%2812 12%29 rotate%28180%29%27 fill=%27none%27 opacity=%270%27/%3E%3C/svg%3E%0A");
     background-position: 97% 50%;
     background-repeat: no-repeat;
 }
+
 .modal-body h1 {
     text-align: center !important;
 }
@@ -129,8 +131,8 @@ color: gainsboro;
     border-radius: 29px !important;
 }
 
-.form-select{
-    color: white !important;
+.form-select {
+    color: black !important;
 }
 
 .licence-form {
@@ -359,7 +361,7 @@ span.notif_countt {
 .feature-purchase-entry {
     border: 1px dashed #D9D9D9;
     width: 100%;
-    max-width: 620px;
+    max-width: 1140px;
     padding: 7px 12px;
     border-radius: 50px;
 }
@@ -409,6 +411,47 @@ span.notif_countt {
     border-top: 1px dashed #d9d9d9;
     margin-top: 0px;
 }
+
+.Premium.Features-red-bg-nav {
+    background: #cf1322;
+    text-align: center;
+    padding: 22px 0px 1px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+}
+
+.click-here-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.click-here-link-re{
+font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.popup-paragraph {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.Premium.Features-red-bg-nav p {
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+}
+
+.accordion-body .form-select{
+  color:white !important;
+}
+
+.licence-form-r .form-select {
+    color: white !important;
+}
+
 #exampleModalapi, #exampleModalapi, .modal-body {
     padding-bottom: 15px !important;
 }
