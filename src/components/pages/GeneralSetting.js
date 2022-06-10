@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 // import { Row } from 'react-bootstrap'
 // import Header from '../Header'
@@ -9,14 +9,16 @@ import blacklogoo from '../assets/Images/paidicon-logo.png'
 import whitelogoo from '../assets/Images/Paidicon.png'
 // import { Button } from 'bootstrap'
 // import { Carousel } from 'bootstrap'
-import logo from '../assets/Images/logo.png'
+// import logo from '../assets/Images/logo.png'
 import message from '../assets/Images/vuesax-bulk-sms.png'
+import ColorPicker from './ColorPicker'
 
 const GeneralSetting = () => {
     let navigate = useNavigate();
 
     const [newlink, setNewlink] = useState("general-setting")
-    const [activeClass, setactiveClass] = useState("inactivee")
+    const [activeClass, setactiveClass] = useState("inactivee");
+    const [displayNoneState, setDisplayNoneState] = useState("")
 
     let url = window.location.href;
     let n = url.lastIndexOf('/');
@@ -26,7 +28,23 @@ const GeneralSetting = () => {
 
         setNewlink(val)
         console.log("click", val);
+        setDisplayNoneState("none")
 
+    }
+
+    useEffect(() => {
+        setDisplayNoneState("none")
+
+
+    }, [])
+
+
+    const hamburgerToggle = () => {
+        if (displayNoneState === 'none') {
+            setDisplayNoneState("block")
+        } else {
+            setDisplayNoneState("none")
+        }
     }
 
     function previewFile() {
@@ -51,15 +69,13 @@ const GeneralSetting = () => {
         <div className={activeClass}>
             <div className="header-mainn border-bottom-dotted bg-light">
                 <div className="header-mainn-inner px-0">
-                    <nav className="navbar navbar-expand-lg navbar-light py-4 px-2">
+                    <nav className={`navbar navbar-expand-lg navbar-light px-2 ${newlink === "premium" ? "premium-features-class" : ""} `} style={{ paddingBottom: "1.5rem", paddingTop: "1.5rem", transition: "all 0.3s ease" }}>
                         <div className="container">
                             <a className="navbar-brand" href="#"><img src={blacklogoo} alt="" height="64px" /></a>
                             <div className='nav_notif-outerr'>
                                 <ul className='notif_main-outer'>
                                     <li className='dropdown notification_bar ms-2 mt-0'>
-
-                                        
-
+                                        <div className='dropdown_innerr-notif'></div>
                                         <button className="btn btn-secondary dropdown-toggle body_activee" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" className='with_hoverrr'>
                                                 <g id="vuesax_bulk_notification-bing" data-name="vuesax/bulk/notification-bing" transform="translate(-108 -188)">
@@ -219,13 +235,12 @@ const GeneralSetting = () => {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </li>
                                 </ul>
-                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <button className="navbar-toggler" type="button" onClick={() => hamburgerToggle()} data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon"></span>
                                 </button>
-                                <div className="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+                                <div className={`collapse navbar-collapse justify-content-end mt-3 mt-lg-0`} style={{ display: displayNoneState }} id="navbarNav">
                                     <ul className="navbar-nav ">
                                         <li className="nav-item me-0 mb-2 mb-lg-0 me-lg-2 text-center">
                                             {/* <Link id='general-setting' onClick={() => Val('general-setting')} className={`nav-link ${newlink === "general-setting" ? "active" : ""} `} aria-current="page" to='/general-setting' >General Settings</Link> */}
@@ -238,7 +253,7 @@ const GeneralSetting = () => {
                                         <li className="nav-item text-center">
                                             {/* <Link id="premium" onClick={() => Val('premium')} className={`nav-link ${newlink === "premium" ? "active" : "/premium"} `} to='' >Premium Features</Link> */}
                                             <span id="premium" onClick={() => Val('premium')} className={`nav-link ${newlink === "premium" ? "active" : ""} `} >Premium Features</span>
-                                          </li>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -309,7 +324,7 @@ const GeneralSetting = () => {
                                         </div>
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4">
                                             <label className="mb-2">Number Of Products</label>
-                                            <input type="text" className="form-control bg-light" placeholder="Number Of Products" />
+                                            <input type="text" className="form-control bg-light" placeholder="0" />
                                         </div>
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4">
                                             <label className="mb-2">Stripe Key</label>
@@ -629,9 +644,9 @@ const GeneralSetting = () => {
                                                         <span>ACH - Wire Transfer</span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                             <g id="add-square" transform="translate(-620 -252)">
-                                                                <path id="Vector" d="M0,0H8" transform="translate(628 264)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                                <path id="Vector-2" data-name="Vector" d="M0,8V0" transform="translate(632 260)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                                <path id="Vector-3" data-name="Vector" d="M7,20h6c5,0,7-2,7-7V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6C0,18,2,20,7,20Z" transform="translate(622 254)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                                <path id="Vector" d="M0,0H8" transform="translate(628 264)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                                                <path id="Vector-2" data-name="Vector" d="M0,8V0" transform="translate(632 260)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                                                <path id="Vector-3" data-name="Vector" d="M7,20h6c5,0,7-2,7-7V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6C0,18,2,20,7,20Z" transform="translate(622 254)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                                                                 <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(620 252)" fill="none" opacity="0" />
                                                             </g>
                                                         </svg>
@@ -666,9 +681,9 @@ const GeneralSetting = () => {
                                                         <span>Credit / Debit Card</span>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                                             <g id="add-square" transform="translate(-620 -252)">
-                                                                <path id="Vector" d="M0,0H8" transform="translate(628 264)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                                <path id="Vector-2" data-name="Vector" d="M0,8V0" transform="translate(632 260)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                                <path id="Vector-3" data-name="Vector" d="M7,20h6c5,0,7-2,7-7V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6C0,18,2,20,7,20Z" transform="translate(622 254)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                                <path id="Vector" d="M0,0H8" transform="translate(628 264)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                                                <path id="Vector-2" data-name="Vector" d="M0,8V0" transform="translate(632 260)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                                                <path id="Vector-3" data-name="Vector" d="M7,20h6c5,0,7-2,7-7V7c0-5-2-7-7-7H7C2,0,0,2,0,7v6C0,18,2,20,7,20Z" transform="translate(622 254)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                                                                 <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(620 252)" fill="none" opacity="0" />
                                                             </g>
                                                         </svg>
@@ -862,7 +877,13 @@ const GeneralSetting = () => {
                                                 <option value="large">Large</option>
                                                 <option value="extra-large">Extra Large</option>
                                             </select> */}
-                                            <input type="color" className="form-control bg-light overflow-hidden p-0" placeholder=""></input>
+
+                                            <span className="form-control bg-light overflow-hidden p-0" placeholder="">
+                                                <ColorPicker/>
+                                            </span>
+
+
+
                                         </div>
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4">
                                             <label className="mb-2">Secondary Color</label>
@@ -872,8 +893,8 @@ const GeneralSetting = () => {
                                                 <option value="large">Large</option>
                                                 <option value="extra-large">Extra Large</option>
                                             </select> */}
-                                            <input type="color" className="form-control bg-light overflow-hidden p-0" placeholder=""></input>
-                                        </div>
+                                            <ColorPicker/>
+                                            </div>
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4">
                                             <label className="mb-2">Design</label>
                                             <select className="form-select bg-light" aria-label="Default select example">
@@ -904,7 +925,7 @@ const GeneralSetting = () => {
 
             <div id='Premium-Features' className={newlink === 'premium' ? " " : "display-none"}>
                 <div className='Premium Features-red-bg-nav'>
-                    <p>Your license expires in 1 day. <a className='click-here-link text-decoration-none' href="#">Click Here</a> to renew now.</p>
+                    <span>Your license expires in 1 day. <a className='click-here-link text-decoration-none' href="#">Click Here</a> to renew now.</span>
                 </div>
                 {/* <Header />  */}
                 <div className="header-title-main  bg-light">
@@ -960,7 +981,7 @@ const GeneralSetting = () => {
                                         </div>
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4 multiselct-dropp">
                                             <label className="mb-2">Restrict To Categories</label>
-                                            <select className="form-select selectpicker" multiple aria-label="Default select example">
+                                            <select className="form-select" aria-label="Default select example">
                                                 <option defaultValue disabled>Categories</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
@@ -969,7 +990,7 @@ const GeneralSetting = () => {
                                         </div>
                                         <div className="form-group col-lg-6 col-xl-3 col-md-6 col-12 mb-4 multiselct-dropp">
                                             <label className="mb-2">Restrict Icon To Pages</label>
-                                            <select className="form-select selectpicker" multiple aria-label="Default select example">
+                                            <select className="form-select" aria-label="Default select example">
                                                 <option defaultValue disabled>Pages</option>
                                                 <option value="1">One</option>
                                                 <option value="2">Two</option>
