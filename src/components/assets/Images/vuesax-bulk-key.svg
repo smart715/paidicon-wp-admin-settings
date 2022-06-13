@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="vuesax_bulk_key" data-name="vuesax/bulk/key" transform="translate(-684 -188)">
+    <g id="key" transform="translate(684 188)">
+      <path id="Vector" d="M35.585,4.425a15.154,15.154,0,0,0-25.18,15.2l-9.4,9.4a4.03,4.03,0,0,0-.98,2.98l.6,4.36a3.775,3.775,0,0,0,3,3l4.36.6a3.886,3.886,0,0,0,2.98-1l1.64-1.64a.99.99,0,0,0,0-1.42l-3.88-3.88a1.5,1.5,0,0,1,2.12-2.12l3.9,3.9a1,1,0,0,0,1.4,0l4.24-4.22a15.136,15.136,0,0,0,15.2-25.16Zm-10.58,15.56a5,5,0,1,1,5-5A5,5,0,0,1,25.005,19.985Z" transform="translate(3.995 4.015)" fill="#fff" opacity="0.4"/>
+      <path id="Vector-2" data-name="Vector" d="M10,5A5,5,0,1,1,5,0,5,5,0,0,1,10,5Z" transform="translate(24 14)" fill="#fff"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H48V48H0Z" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>
